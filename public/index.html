@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hook - Beta</title>
+</head>
+<body>
+
+  <h1>🔍 Phishing Link Checker</h1>
+
+  <form id="checkForm">
+    <input type="text" id="linkInput" placeholder="Paste a link here..." required style="width: 300px;" />
+    <button type="submit">Check Link</button>
+  </form>
+
+  <p id="result" style="font-weight: bold; margin-top: 10px;"></p>
+
+  <hr />
+
+   <h2>Add a Known Phishing URL (admin/testing)</h2> 
+  <form id="addForm">
+    <input type="text" id="addLinkInput" placeholder="Bad URL to add..." required style="width: 300px;" />
+    <button type="submit">Add to Database</button>
+  </form>
+
+  <h2>All Known Phishing URLs</h2>
+  <ul id="urlList"></ul>
+
+  <script src="phishing.js"></script>
+</body>
+</html>
