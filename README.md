@@ -1,6 +1,7 @@
 # fallproject
+
 My fall 2026 project
-"Hook"
+"Hook - Phishing detection extension"
 An extension that analyzes the current webpage(both the URL and the script) you are on and generates a risk assessment basically telling you how suspicious the site looks.
 By analyzing the webpage, it evaluates several indicators like;
 Suspicious URL structures
