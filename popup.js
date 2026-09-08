@@ -13,7 +13,8 @@ document.getElementById('startButton').addEventListener('click', async () => {
                 return;
             }
 
-            console.log("Scraped Data:", pageData);
+            console.log("URL:", pageData.url);
+            
         }
     );
 
