@@ -1,6 +1,20 @@
 //ELEMENTS
-const startButton = document.getElementById("startButton")
+document.getElementById('startButton').addEventListener('click', async () => {
+  // Find the first active tab in the current window
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-startButton.onclick = function(){
-     console.log("You clicked the start button");
-}
+  chrome.tabs.sendMessage(
+        tab.id,
+        { action: "scrape_page" },
+        (pageData) => {
+
+            if (chrome.runtime.lastError) {
+                console.error(chrome.runtime.lastError.message);
+                return;
+            }
+
+            console.log("Scraped Data:", pageData);
+        }
+    );
+
+});

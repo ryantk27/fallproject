@@ -15,5 +15,5 @@
         "default_popup":"popup.html",
         "default_title":"hook"
     },
-    "permissions":["tabs"]
+    "permissions":["tabs","activeTab", "scripting"]
 }
