@@ -1,8 +1,9 @@
 // content.js
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
-    if (message.action === "scrape_page") {
-
+    if (message.action !== "scrape_page") {
+            return;
+    }
         const pageData = {
             url: window.location.href,
             dom: document.documentElement.outerHTML,
@@ -12,4 +13,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         sendResponse(pageData);
     }
 
-});
+);
